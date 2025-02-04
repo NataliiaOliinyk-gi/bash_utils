@@ -1,7 +1,7 @@
-```markdown
 # Основные команды Git
 
-## `git add`
+## `git commit`
+
 ```sh
 git add file.txt        # Добавить один файл
 git add .               # Добавить все файлы в текущей директории
@@ -66,7 +66,7 @@ git rebase --abort         # Отменить rebase
 git reset HEAD file.txt          # Удалить файл из индекса (но оставить изменения)
 git reset --soft HEAD~1          # Отменить последний коммит, оставив изменения
 git reset --hard HEAD~1          # Полностью отменить последний коммит и изменения
-git reset --hard 53425t2rewt45   # Полностью отменить последний коммит и изменения по хэшу
+git reset --hard 53425t2rewt45   # Откатить изменения до коммита 53425t2rewt45
 ```
 
 ## `git revert`
@@ -113,8 +113,7 @@ git push origin --tags  # Отправить теги в удалённый ре
 git cherry-pick abc123  # Применить коммит abc123 в текущую ветку
 ```
 
-## `git stage`
+## `git stash`
 ```sh
-git stage file.txt      # Добавить файл в индекс (аналогично git add)
-```
+git stash # ...
 ```
